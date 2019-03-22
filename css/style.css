@@ -1,0 +1,244 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+/*---- this CSS controls the nav bar----*/
+ul#nav-menu {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+.validator{
+  float: right;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display: grid;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #800080;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color: black;
+}
+/*---- this CSS controls the h1 tags----*/
+h1 {
+  position:relative;
+  font-weight:normal;
+  text-transform:uppercase;
+  font-size: 2.5em;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+header p{
+  text-align: center;
+}
+/*---- this CSS controls the h2 tags----*/
+h2 {
+  position:relative;
+  font-weight:normal;
+  text-transform:uppercase;
+  font-size: 1.75em;
+  text-align: left;
+  margin-left: 5px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+/*---- this CSS controls the p tags----*/
+p {
+  position:relative;
+  font-weight:normal;
+  margin-left: 5px;
+  font-size: 1em;
+  font-family:Arial, Helvetica, sans-serif;
+  }
+/*---- this CSS controls the images----*/
+.images {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.images img{
+  flex: 1;
+  box-sizing: border-box;
+}
+.center-fit {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+img {
+  border:3px solid white;
+}
+/*---- this CSS controls the calendar----*/
+.calendar {
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  margin: auto;
+}
+/*---- this CSS controls the timeline----*/
+.timeline{
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 75px;
+}
+.timeline aside{
+  display: block;
+  float: left;
+  width: 90px;
+  flex: 0 0 auto;
+}
+.timeline aside p{
+  margin: 0;
+  padding: 4px;
+  background: #800080;
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+}
+.timeline p{
+  display: block;
+  margin-left: 10px;
+  border-radius: 25px;
+  padding: 0 10px;
+  flex: 1;
+  margin-top: 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 43px;
+  width: 4px;
+  z-index: -1;
+  background: #800080;
+}
+/*---- this CSS controls the homescreen and bit of the videos----*/
+.homescreen, .videos {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+.videos figure{
+  margin: 0;
+  font-size: 1em;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+.videos figure:first-child {
+  margin-top: 0px;
+}
+.videos figure video {
+  width: 100%;
+  max-width: 1000px;
+}
+footer {
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+/*---- this CSS controls the Lit-Review----*/
+.review {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+/*---- this CSS controls the main title on every page and small texts on gallery and video page----*/
+.title {
+  font-family: "Lucida Console", Monaco, monospace;
+  color: #800080;
+}
+.littleTexts {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+/*---- this CSS controls the margin on the review page and timeline page----*/
+@media (max-width: 600px) {
+  .review {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .timeline {
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+}
+/*---- this CSS controls the calendar by shorting its size on a touch screen device----*/
+@media (pointer: coarse) {
+  .calendar {
+    max-height: 50vh;
+  }
+}
+
+/* Hides the navbar top by default */
+#nav-top {
+  display: none;
+}
+/* sticks the nav bar to the top of the page when you scroll */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Only work on >600px sites */
+@media (max-width: 630px) {
+  /* Contains the clickable links */
+  #nav-menu {
+    display: none;
+  }
+  #nav-menu li {
+    display: block;
+    float: none;
+  }
+  /* Top bar of nav that appears on mobile */
+  #nav-top {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    background: black;
+    color: white;
+    font-size: 1.2em;
+  }
+  /* Button that toggles the navbar */
+  #nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 2px 10px;
+    font-size: 1.4em;
+    padding-bottom: 10px; 
+    border: none;
+    border-radius: 100%;
+    background: none;
+    color: white;
+    display: flex;
+    line-height: 1.4em;
+  }
+  /* Class that makes the navbar appear */
+  .show {
+    display: block !important;
+  }
+}
